@@ -1,0 +1,155 @@
+<nav
+  class="fixed top-0 z-50 w-full"
+  [ngClass]="{
+    'bg-transparent text-white': isHome && !scrolled,
+    'border-b-2': isHome && scrolled,
+    'bg-white text-blue-950 border-b-2': !isHome}">
+  <div class="flex justify-between lg:justify-center py-2.5 md:gap-96 lg:gap-12 xl:gap-44">
+    <div class="logo flex items-center gap-2 ml-5">
+      <img
+        *ngIf="isHome && !scrolled"
+        src="../../../assets/imgs/logo.png"
+        class="lg:w-7 w-6"
+        alt="job-swift logo">
+      <img
+        *ngIf="!isHome || scrolled"
+        src="../../../favicon.ico"
+        class="lg:w-7 w-6"
+        alt="job-swift logo">
+      <h1 class="font-semibold lg:text-2xl text-xl cursor-pointer" routerLink="/home">JobSwift</h1>
+      <button
+        *ngIf="isHome && !scrolled"
+        class="flex rounded-3xl px-3 py-1 pb-1.5 ml-2 text-sm font-medium
+        items-center justify-center gap-2 bg-white bg-opacity-20"
+        routerLink="/categories">
+        <img src="../../../assets/imgs/category-white.png" alt="logo">
+        Categories
+      </button>
+      <ng-template [ngIf]="!isHome || scrolled">
+        <button class="flex rounded-3xl px-3 py-1 pb-1.5 ml-2 text-sm font-medium
+                items-center justify-center gap-2 bg-gray-200"
+                routerLink="/categories">
+          <img src="../../../assets/imgs/category-black.png" alt="logo">
+          Categories
+        </button>
+      </ng-template>
+    </div>
+    <ul class="hidden lg:flex gap-1 items-center font-medium">
+      <li>
+        <button
+          class="nav-links"
+          [ngClass]="{
+            'hover-transparent bg-white bg-opacity-10': isHome && !scrolled,
+            'hover-blue': !isHome || scrolled,
+            'text-blue-800': isHome && scrolled}"
+          routerLink="/home">
+          Home
+        </button>
+      </li>
+      <li>
+        <button
+          class="nav-links"
+          [ngClass]="{'hover-transparent': isHome && !scrolled, 'hover-blue': !isHome || scrolled}"
+          routerLink="/jobs"
+          routerLinkActive="text-blue-800">
+          Jobs
+        </button>
+      </li>
+      <li>
+        <button
+          class="nav-links"
+          [ngClass]="{'hover-transparent': isHome && !scrolled, 'hover-blue': !isHome || scrolled}"
+          routerLink="/candidates"
+          routerLinkActive="text-blue-800">
+          Candidates
+        </button>
+      </li>
+      <li>
+        <button
+          class="nav-links"
+          [ngClass]="{'hover-transparent': isHome && !scrolled, 'hover-blue': !isHome || scrolled}"
+          routerLink="/companies"
+          routerLinkActive="text-blue-800">
+          Companies
+        </button>
+      </li>
+      <li>
+        <button
+          class="nav-links"
+          [ngClass]="{'hover-transparent': isHome && !scrolled, 'hover-blue': !isHome || scrolled}"
+          routerLink="/about-us"
+          routerLinkActive="text-blue-800">
+          About us
+        </button>
+      </li>
+    </ul>
+    <div class="hidden lg:flex gap-2 font-medium">
+      <button
+        class="rounded-3xl pb-1 px-3"
+        [ngClass]="{
+          'text-white bg-white bg-opacity-20': (isHome && !scrolled),
+          'text-blue-700 bg-blue-100': (!isHome || scrolled)}">
+        Log In
+      </button>
+      <button class="bg-blue-700 text-white rounded-3xl pb-1 px-3">Create Account</button>
+    </div>
+    <!-- Small devices view -->
+    <button (click)="toggleMenu()" class="lg:hidden mr-5 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <ul class="dropdown-menu lg:hidden absolute flex flex-col items-center
+              top-14 right-5 z-10  rounded-lg px-3 pt-1 pb-5"
+        [ngClass]="{
+          'block': showMenu,
+          'hidden': !showMenu,
+          'bg-white bg-opacity-30': (isHome && !scrolled),
+          'bg-gray-200': (!isHome || scrolled)}">
+      <li>
+        <button
+          class="menu-links mt-3"
+          routerLink="/home"
+          routerLinkActive="text-blue-800">
+          Home
+        </button>
+      </li>
+      <li>
+        <button
+          class="menu-links"
+          routerLink="/jobs"
+          routerLinkActive="text-blue-800">
+          Jobs
+        </button>
+      </li>
+      <li>
+        <button
+          class="menu-links"
+          routerLink="/candidates"
+          routerLinkActive="text-blue-800">
+          Candidates
+        </button>
+      </li>
+      <li>
+        <button
+          class="menu-links"
+          routerLink="/companies"
+          routerLinkActive="text-blue-800">
+          Companies
+        </button>
+      </li>
+      <li>
+        <button
+          class="menu-links"
+          routerLink="/about-us"
+          routerLinkActive="text-blue-800">
+          About us
+        </button>
+      </li>
+      <div class="mt-8 flex flex-col gap-2 font-medium items-center">
+        <button class="bg-blue-100 text-blue-600 rounded-3xl px-5 py-1 pb-2">Log In</button>
+        <button class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2">Create Account</button>
+      </div>
+    </ul>
+  </div>
+</nav>
