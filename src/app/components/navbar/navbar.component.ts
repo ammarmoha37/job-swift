@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit{
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.updateNavIfHome(event.url);
+        this.showMenu = false;
       }
     });
     document.addEventListener('click', this.onClick.bind(this));

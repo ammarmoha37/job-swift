@@ -100,12 +100,12 @@
       </svg>
     </button>
     <ul class="dropdown-menu lg:hidden absolute flex flex-col items-center
-              top-14 right-5 z-10  rounded-lg px-3 pt-1 pb-5"
+              top-14 right-5 z-10  rounded-lg px-3 pt-1 pb-5 text-white"
         [ngClass]="{
           'block': showMenu,
           'hidden': !showMenu,
-          'bg-white bg-opacity-30': (isHome && !scrolled),
-          'bg-gray-200': (!isHome || scrolled)}">
+          'bg-gray-400 sm:bg-white sm:bg-opacity-30': (isHome && !scrolled),
+          'bg-slate-400': (!isHome || scrolled)}">
       <li>
         <button
           class="menu-links mt-3"
