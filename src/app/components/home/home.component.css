@@ -1,3 +1,15 @@
 .search::placeholder {
   @apply text-white sm:text-gray-700 ;
 }
+
+.part-time {
+  @apply py-1 w-24 mb-2 font-medium text-center;
+  color: #00BF58;
+  background-color: #EEFFF5;
+}
+
+.freelance {
+  @apply py-1 w-24 mb-2 font-medium text-center;
+  color: #B44809;
+  background-color: #FFFAEC;
+}
