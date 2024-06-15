@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  openIndex: number = 0;
 
+  setOpenIndex(index: number, event: Event) {
+    event.preventDefault();
+    this.openIndex = this.openIndex === index ? -1 : index;
+  }
 }
