@@ -334,11 +334,11 @@
   <div class="flex flex-col items-center lg:items-end">
     <div class="pl-8 lg:pl-28 pr-2 mt-20 text-white lg:w-1/2 flex flex-col items-center lg:items-start gap-7">
       <img class="w-10 md:w-16 mb-7" src="../../../assets/imgs/job-icon.png" alt="icon">
-      <h2 class="font-medium text-4xl md:text-5xl xl:text-6xl lg:w-4/5 text-center lg:text-left">Let’s get started It’s simple.</h2>
-      <p class="text-lg md:text-xl sm:w-5/6 text-center lg:text-left">Get access to our top 1% talent as well as a complete set of hybrid workforce management tools.</p>
+      <h2 class="font-medium text-4xl md:text-5xl xl:text-6xl lg:w-4/5 text-center lg:text-left xl:max-w-lg">Let’s get started It’s simple.</h2>
+      <p class="text-lg md:text-xl sm:w-5/6 text-center lg:text-left max-w-xl">Get access to our top 1% talent as well as a complete set of hybrid workforce management tools.</p>
     </div>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-14 sm:mx-auto lg:mx-28 xl:mx-28 my-20">
+  <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-14 sm:mx-auto lg:mx-28 xl:mx-auto my-20">
     <div class="bg-white sm:w-96 lg:w-auto lg:max-w-fit p-3 md:p-6 rounded-2xl flex justify-evenly gap-2 md:gap-3">
       <img class="h-10 md:h-14" src="../../../assets/imgs/simple-start-icon1.png" alt="icon">
       <div class="flex flex-col gap-3">
@@ -376,3 +376,110 @@
   </div>
 </div>
 <!-- Explore End-->
+<!-- Questions & Answers Start -->
+<div class="flex flex-col items-center w-4/5 mx-auto xl:min-w-full">
+  <h2 class="font-medium text-3xl md:text-4xl lg:text-5xl my-7 text-blue-950">Questions & Answers</h2>
+  <div class="mt-7 mb-10 max-w-7xl w-full">
+    <details class="group border-t-2 border-b-2 border-gray-100" [open]="SecondOpenIndex === 0">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between py-7 text-lg sm:text-xl lg:text-2xl font-medium text-blue-950 group-open:text-primary-500"
+        (click)="setSecondOpenIndex(0, $event)">
+        How does the free trial work?
+        <div>
+          <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="31" rx="15.5" fill="white"/>
+            <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="black"/>
+          </svg>
+          <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="31" height="31" rx="15.5" fill="#2F2FFC"/>
+            <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="white"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 w-11/12 xl:w-4/6 text-sm lg:text-lg text-gray-500">
+        Explore everything! Test features like job posting and applicant tracking for free. No credit card needed, just sign up and see if we're the perfect fit.
+      </div>
+    </details>
+    <details class="group border-b-2 border-gray-100" [open]="SecondOpenIndex === 1">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between py-7 text-lg sm:text-xl lg:text-2xl font-medium text-blue-950 group-open:text-primary-500"
+        (click)="setSecondOpenIndex(1, $event)">
+        How do you find different criteria in your process?
+        <div>
+          <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="31" rx="15.5" fill="white"/>
+            <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="black"/>
+          </svg>
+          <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="31" height="31" rx="15.5" fill="#2F2FFC"/>
+            <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="white"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 w-4/6 text-sm lg:text-lg text-gray-500">
+        Our search engine uses keywords, filters, and location to match you with the most relevant jobs and candidates. Simply enter what you're looking for and let us do the work!
+      </div>
+    </details>
+    <details class="group border-b-2 border-gray-100" [open]="SecondOpenIndex === 2">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between py-7 text-lg sm:text-xl lg:text-2xl font-medium text-blue-950 group-open:text-primary-500"
+        (click)="setSecondOpenIndex(2, $event)">
+        What do you look for in a founding team?
+        <div>
+          <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="31" rx="15.5" fill="white"/>
+            <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="black"/>
+          </svg>
+          <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="31" height="31" rx="15.5" fill="#2F2FFC"/>
+            <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="white"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 w-4/6 text-sm lg:text-lg text-gray-500">
+        We value passionate individuals with complementary skills. A strong mix of tech expertise, business sense, and a clear vision is what sets winning teams apart!
+      </div>
+    </details>
+    <details class="group border-b-2 border-gray-100" [open]="SecondOpenIndex === 3">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between py-7 text-lg sm:text-xl lg:text-2xl font-medium text-blue-950 group-open:text-primary-500"
+        (click)="setSecondOpenIndex(3, $event)">
+        Do you recommend Pay as you go or Pre pay?
+        <div>
+          <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="31" rx="15.5" fill="white"/>
+            <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="black"/>
+          </svg>
+          <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="31" height="31" rx="15.5" fill="#2F2FFC"/>
+            <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="white"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 w-11/12 xl:w-4/6 text-sm lg:text-lg text-gray-500">
+        It depends! Pay as you go offers flexibility for occasional hiring. Pre-pay plans often come with discounts for frequent employers. Check our pricing page for details.
+      </div>
+    </details>
+    <details class="group border-b-2 border-gray-100" [open]="SecondOpenIndex === 4">
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between py-7 text-lg sm:text-xl lg:text-2xl font-medium text-blue-950 group-open:text-primary-500"
+        (click)="setSecondOpenIndex(4, $event)">
+        What do I get for $0 with my plan?
+        <div>
+          <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="31" rx="15.5" fill="white"/>
+            <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="black"/>
+          </svg>
+          <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="31" height="31" rx="15.5" fill="#2F2FFC"/>
+            <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="white"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 w-11/12 xl:w-4/6 text-sm lg:text-lg text-gray-500">
+        Get started with basic features! You can post limited jobs, search for candidates, and manage applications – all at no cost. Upgrade for more powerful features!
+      </div>
+    </details>
+  </div>
+</div>
+<!-- Questions & Answers End -->
