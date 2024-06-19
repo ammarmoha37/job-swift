@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
+import { CompaniesComponent } from './components/companies/companies.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CandidatesComponent } from './components/candidates/candidates.componen
     NavbarComponent,
     FooterComponent,
     JobsComponent,
-    CandidatesComponent
+    CandidatesComponent,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,
