@@ -1,9 +1,10 @@
 <nav
-  class="fixed top-0 z-50 w-full"
+  class="top-0 z-50 w-full"
   [ngClass]="{
+    'fixed': isHome,
     'bg-transparent text-white': isHome && !scrolled,
     'border-b-2 bg-white': isHome && scrolled,
-    'bg-white text-blue-950 border-b-2': !isHome}">
+    'bg-white text-blue-950 border-b-2 sticky': !isHome}">
   <div class="flex justify-between lg:justify-center py-2.5 md:gap-96 lg:gap-12 xl:gap-48">
     <div class="logo flex items-center gap-2 ml-5">
       <img
