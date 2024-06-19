@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { JobsComponent } from './components/jobs/jobs.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { JobsComponent } from './components/jobs/jobs.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    JobsComponent
+    JobsComponent,
+    CandidatesComponent
   ],
   imports: [
     BrowserModule,
