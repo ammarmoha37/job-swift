@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
 import { CompaniesComponent } from './components/companies/companies.component';
+import { JobDetailsComponent } from './components/job-details/job-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'jobs', component: JobsComponent },
   { path: 'candidates', component: CandidatesComponent },
   { path: 'companies', component: CompaniesComponent },
+  { path: 'job/:id', component: JobDetailsComponent},
   { path: 'categories', component: HomeComponent },
   { path: 'about-us', component: HomeComponent },
 ];

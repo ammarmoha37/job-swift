@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
 import { CompaniesComponent } from './components/companies/companies.component';
+import { JobDetailsComponent } from './components/job-details/job-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CompaniesComponent } from './components/companies/companies.component';
     FooterComponent,
     JobsComponent,
     CandidatesComponent,
-    CompaniesComponent
+    CompaniesComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+.info-card {
+  border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+  .info-card {
+    border-radius: 35px;
+  }
+}
