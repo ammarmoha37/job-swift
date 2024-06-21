@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { environment } from './environments/enivronment';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -36,9 +42,15 @@ import { JobListingComponent } from './components/job-listing/job-listing.compon
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    provideFirebaseApp(() => initializeApp({"projectId":"jobswift-10401","appId":"1:77962449172:web:46d765f94319f5a2eab201","storageBucket":"jobswift-10401.appspot.com","apiKey":"AIzaSyD-lj-X5EYTbcmYzpw_BZbEZ0FYr25ZZwA","authDomain":"jobswift-10401.firebaseapp.com","messagingSenderId":"77962449172"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
