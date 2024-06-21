@@ -11,6 +11,7 @@ import { JobsComponent } from './components/jobs/jobs.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
 import { CompaniesComponent } from './components/companies/companies.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JobDetailsComponent } from './components/job-details/job-details.compon
     JobsComponent,
     CandidatesComponent,
     CompaniesComponent,
-    JobDetailsComponent
+    JobDetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

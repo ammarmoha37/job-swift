@@ -1,0 +1,221 @@
+<div class="flex flex-col items-center py-10 sm:py-14 md:py-28 bg-blue-100">
+  <p class="text-blue-950 font-semibold text-4xl sm:text-5xl md:text-6xl">About us</p>
+</div>
+<div class="w-5/6 mx-auto max-w-7xl">
+  <div class="flex flex-col sm:flex-row justify-center sm:justify-between w-full py-6 sm:py-8 md:py-12 xl:py-16">
+    <h2 class="sm:w-1/2  text-center sm:text-start font-serif font-medium text-4xl lg:text-5xl xl:text-6xl text-blue-700 leading-snug sm:leading-normal md:leading-normal lg:leading-snug xl:leading-snug">
+      We've been <br>helping customer <br>globally.
+    </h2>
+    <div class="divide-y divide-gray-200 sm:w-1/2 min-w-min mt-6 sm:mt-0">
+      <details class="group" [open]="openIndex === 0">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between  lg:py-4 font-medium text-blue-700 text-lg sm:text-xl lg:text-2xl group-open:text-primary-500"
+          (click)="setOpenIndex(0, $event)">
+          Who are we?
+          <div>
+            <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="7" width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="#1D4ED8"/>
+            </svg>
+            <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="#1D4ED8"/>
+            </svg>
+          </div>
+        </summary>
+        <div class="pb-4 text-sm lg:text-lg text-gray-600">
+          Our founders Dustin Moskovitz and Justin lorem Rosenstein met while leading Engineering teams at Facebook quesi.        </div>
+      </details>
+      <details class="group" [open]="openIndex === 1">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between py-4 font-medium text-blue-700 text-lg sm:text-xl lg:text-2xl group-open:text-primary-500"
+          (click)="setOpenIndex(1, $event)">
+          What’s our goal?
+          <div>
+            <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="7" width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="#1D4ED8"/>
+            </svg>
+            <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="#1D4ED8"/>
+            </svg>
+          </div>
+        </summary>
+        <div class="pb-4 text-sm lg:text-lg text-gray-600">
+          Establish ourselves as the leading platform for connecting employers seeking niche skills with qualified candidates who possess them.
+        </div>
+      </details>
+      <details class="group" [open]="openIndex === 2">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between py-4 font-medium text-blue-700 text-lg sm:text-xl lg:text-2xl group-open:text-primary-500"
+          (click)="setOpenIndex(2, $event)">
+          Our vision
+          <div>
+            <svg class="hidden h-10 w-10 group-open:block" width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="7" width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M20.875 23V24.875H9.96591V23H20.875Z" fill="#1D4ED8"/>
+            </svg>
+            <svg class="block h-10 w-10 group-open:hidden" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="31" height="31" rx="15.5" fill="white"/>
+              <path d="M16.9545 25.8068V14.5568H18.8636V25.8068H16.9545ZM12.2841 21.1364V19.2273H23.5341V21.1364H12.2841Z" fill="#1D4ED8"/>
+            </svg>
+          </div>
+        </summary>
+        <div class="pb-4 text-sm lg:text-lg text-gray-600">
+          Empower a future where passionate individuals can find their dream jobs that perfectly utilize their unique talents. This vision statement is aspirational and emphasizes the human aspect of connecting people with fulfilling work.
+        </div>
+      </details>
+    </div>
+  </div>
+  <img  class="rounded-3xl" src="../../../assets/imgs/about.jpg" alt="">
+
+  <div class="flex justify-between sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 pb-10 py-5 border-b-2 mx-auto">
+      <div class="flex flex-col items-center">
+        <h1 class="font-medium font-serif text-2xl sm:text-3xl md:text-5xl xl:text-6xl text-blue-700"><b class="font-medium relative md:bottom-2">7</b>million</h1>
+        <p class="text-center text-sm sm:text-base md:text-lg lg:text-xl mt-3">Completed Jobs</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h1 class="font-medium font-serif text-2xl sm:text-3xl md:text-5xl xl:text-6xl text-blue-700"><b class="font-medium relative md:bottom-2">30</b>k+</h1>
+        <p class="text-center text-sm sm:text-base md:text-lg lg:text-xl mt-3">Worldwide Client</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h1 class="font-medium font-serif text-2xl sm:text-3xl md:text-5xl xl:text-6xl text-blue-700"><b class="font-medium relative md:bottom-2">13</b>billion</h1>
+        <p class="text-center text-sm sm:text-base md:text-lg lg:text-xl mt-3">Dollar Payout</p>
+      </div>
+  </div>
+
+  <div class="flex flex-col sm:flex-row items-center sm:items-start justify-between lg:gap-10 mt-16">
+    <div class="sm:w-1/2 flex justify-center">
+      <img class="sm:min-w-[320px] md:min-w-96 lg:min-w-[500px] xl:min-w-[620px] sm:max-w-[620px]" src="../../../assets/imgs/about2.jpg" alt="image">
+    </div>
+    <div class="flex flex-col sm:w-1/2">
+      <p class="text-gray-400 uppercase tracking-wider mb-2">why choose us</p>
+      <h2 class="font-medium font-serif text-4xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl text-blue-700 xl:leading-tight">
+        Get over 50.000+ talented experts in JobSwift.
+      </h2>
+      <p class="my-2.5 md:my-3 text-gray-600 text-base sm:text-sm md:text-base lg:text-lg w-full xl:w-5/6 lg:leading-relaxed xl:leading-loose">
+        A full hybrid workforce management tools are yours to use, as well as access to our top 1% of talent.
+      </p>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-4 my-1 sm:my-0.5 md:my-1">
+          <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73024 7.05224L7.26634 11.9848C8.88695 9.24452 12.7642 3.28189 15.3083 1.35383" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p class="font-medium text-base sm:text-sm md:text-base lg:text-lg leading-relaxed">Seamless searching</p>
+        </div>
+        <div class="flex items-center gap-4 my-1 sm:my-0.5 md:my-1">
+          <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73024 7.05224L7.26634 11.9848C8.88695 9.24452 12.7642 3.28189 15.3083 1.35383" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p class="font-medium text-base sm:text-sm md:text-base lg:text-lg leading-relaxed">Get top 3% experts for your project</p>
+        </div>
+        <div class="flex items-center gap-4 my-1 sm:my-0.5 md:my-1">
+          <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73024 7.05224L7.26634 11.9848C8.88695 9.24452 12.7642 3.28189 15.3083 1.35383" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p class="font-medium text-base sm:text-sm md:text-base lg:text-lg leading-relaxed">Protected payments system</p>
+      </div>
+      <button class="mt-4 md:mt-6 lg:mt-8 bg-blue-700 text-white font-medium h-8 sm:h-10 w-24 sm:w-36 text-sm sm:text-base rounded-3xl">Post a Job</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="bg-blue-700 mt-8 pt-10 sm:pt-0">
+  <img class="w-14 sm:w-20 lg:w-auto hidden sm:block" src="../../../assets/imgs/bg-shape.png" alt="bg-shape">
+  <div class="flex flex-col items-center mb-10">
+    <img class="w-14 sm:w-20 lg:w-auto relative left-32 sm:left-44 lg:left-52 top-3 lg:top-4" src="../../../assets/imgs/Shape.png" alt="bg-shape">
+    <h1 class="text-white font-medium font-serif text-4xl sm:text-5xl lg:text-6xl">How it’s work?</h1>
+  </div>
+  <div class="flex justify-center mb-16 sm:mb-0">
+    <div class="flex flex-col items-center max-w-xs">
+      <svg class="w-14 md:w-auto" width="73" height="80" viewBox="0 0 73 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.900391" y="0.5" width="71" height="79" rx="35.5" fill="#BFD1FF" stroke="#BFD1FF"/>
+        <path d="M36.756 43.7151C29.7689 43.7151 23.8008 44.9391 23.8008 49.8351C23.8008 54.7329 29.7316 56.0002 36.756 56.0002C43.7431 56.0002 49.7112 54.7779 49.7112 49.8801C49.7112 44.9823 43.782 43.7151 36.756 43.7151Z" fill="#1F1FB4"/>
+        <path opacity="0.4" d="M36.7547 39.0513C41.5143 39.0513 45.3278 34.8123 45.3278 29.5256C45.3278 24.239 41.5143 20 36.7547 20C31.9968 20 28.1816 24.239 28.1816 29.5256C28.1816 34.8123 31.9968 39.0513 36.7547 39.0513Z" fill="#1F1FB4"/>
+      </svg>
+      <h2 class="text-white font-medium text-xl md:text-2xl text-center mt-6 mb-3">Create Account</h2>
+      <p class="text-blue-200 leading-snug text-center">
+        It’s very easy to open an account and start your journey.
+      </p>
+    </div>
+    <svg class="relative top-6" width="129" height="27" viewBox="0 0 129 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.799805 15.165C0.799805 15.165 58.1801 -15.165 117.509 15.165" stroke="white" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <path d="M111.658 25.5132L127.173 20.1649L121.882 3.67505" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <div class="flex flex-col items-center max-w-xs">
+      <svg class="w-14 md:w-auto" width="73" height="80" viewBox="0 0 73 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1.40039" y="0.5" width="71" height="79" rx="35.5" fill="#BFD1FF" stroke="#BFD1FF"/>
+        <path opacity="0.4" d="M43.2958 23H31.2272C26.8496 23 24.3008 25.848 24.3008 30.728V47.256C24.3008 52.216 26.8496 55 31.2272 55H43.2958C47.744 55 50.2208 52.216 50.2208 47.256V30.728C50.2208 25.848 47.744 23 43.2958 23Z" fill="#1F1FB4"/>
+        <path d="M31.6151 44.9847H42.9047C43.4793 45.0487 43.9127 45.5927 43.9127 46.2487C43.9127 46.8871 43.4793 47.4327 42.9047 47.4967H31.6151C31.1831 47.5607 30.7655 47.3207 30.5351 46.9207C30.3047 46.5047 30.3047 45.9767 30.5351 45.5767C30.7655 45.1607 31.1831 44.9367 31.6151 44.9847ZM42.9047 37.6871C43.5239 37.6871 44.0279 38.2487 44.0279 38.9367C44.0279 39.6247 43.5239 40.1847 42.9047 40.1847H31.6151C30.9945 40.1847 30.4919 39.6247 30.4919 38.9367C30.4919 38.2487 30.9945 37.6871 31.6151 37.6871H42.9047ZM35.9193 30.4407C36.5399 30.4407 37.0439 31.0007 37.0439 31.6871C37.0439 32.3927 36.5399 32.9527 35.9193 32.9527H31.6151C30.9945 32.9527 30.4919 32.3927 30.4919 31.7047C30.4919 31.0167 30.9945 30.4567 31.6151 30.4567V30.4407H35.9193Z" fill="#1F1FB4"/>
+      </svg>
+      <h2 class="text-white font-medium text-xl md:text-2xl text-center mt-6 mb-3">Complete your profile</h2>
+      <p class="text-blue-200 leading-snug text-center">Complete your profile with all the info to get attention of client.</p>
+    </div>
+    <svg class="relative top-6" width="129" height="27" viewBox="0 0 129 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.799805 15.165C0.799805 15.165 58.1801 -15.165 117.509 15.165" stroke="white" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <path d="M111.658 25.5132L127.173 20.1649L121.882 3.67505" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <div class="flex flex-col items-center max-w-xs">
+      <svg class="w-14 md:w-auto" width="73" height="80" viewBox="0 0 73 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1.19922" y="0.5" width="71" height="79" rx="35.5" fill="#BFD1FF" stroke="#BFD1FF"/>
+        <path d="M36.9314 28.5472L45.0758 35.8594C45.2722 36.0342 45.3058 36.3551 45.1524 36.5787L35.4971 50.5577C34.8902 51.4212 33.9957 51.9098 33.0373 51.9278L27.7664 52C27.4853 52.0035 27.2394 51.7872 27.1755 51.4771L25.9775 45.6901C25.7699 44.6264 25.9775 43.5267 26.5845 42.6794L36.2877 28.6337C36.4443 28.4083 36.7334 28.3687 36.9314 28.5472Z" fill="#1F1FB4"/>
+        <path opacity="0.4" d="M48.7209 31.5014L47.1508 33.6792C46.9927 33.9009 46.7084 33.937 46.5119 33.7603C44.6032 32.044 39.7156 27.6398 38.3596 26.4192C38.1615 26.239 38.1344 25.9181 38.2941 25.6945L39.8083 23.6051C41.1819 21.64 43.5778 21.4597 45.5104 23.1724L47.7306 25.1374C48.641 25.9307 49.248 26.9763 49.4556 28.076C49.6952 29.2857 49.4397 30.4738 48.7209 31.5014Z" fill="#1F1FB4"/>
+      </svg>
+      <h2 class="text-white font-medium text-xl md:text-2xl text-center mt-6 mb-3">Apply job or hire</h2>
+      <p class="text-blue-200 leading-snug text-center">Apply & get your preferable jobs with all the requirements and get it.</p>
+    </div>
+  </div>
+  <div class="flex justify-end">
+    <img class="mr-3 mb-3 hidden sm:block" src="../../../assets/imgs/bg-shape2.png" alt="bg-shape">
+  </div>
+</div>
+
+<div class="w-4/5 mx-auto mt-16 max-w-7xl">
+  <div class="flex justify-between">
+    <h1 class="font-medium font-serif text-5xl text-blue-700">
+      Trusted by leading<br> startups.
+    </h1>
+    <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M79.4492 1L93.5992 13.8636L79.4492 26.7273" stroke="black" stroke-width="2"/>
+      <path d="M92 14L43 14" stroke="black" stroke-width="2"/>
+      <g opacity="0.3">
+      <path d="M9 20.7271L2 14.3634L9 7.99978" stroke="black" stroke-width="2"/>
+      <path d="M3 14H20" stroke="black" stroke-width="2"/>
+      </g>
+    </svg>
+  </div>
+  <div class="flex flex-col sm:flex-row justify-center gap-1 md:gap-6 my-10 xl:mb-14">
+    <div class="bg-[#BFD1FF] border-2 border-black rounded-3xl px-6 xl:px-10 pt-6 xl:pt-10 pb-0 md:min-w-[300px] lg:min-w-[400px] xl:min-w-[600px]">
+      <img class="sm:w-40 md:w-auto sm:h-10 md:h-auto" src="../../../assets/imgs/monday-logo.png" alt="Monday.com">
+      <p class="font-medium text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-w-md my-4 sm:my-2 md:my-4 lg:my-8 xl:my-10">
+        “Seattle opera simplifies Performance planning with deski eSignature.”
+      </p>
+      <p class="mb-6 sm:mb-4 md:mb-6 lg:mb-8"><b class="font-medium">Rashed Kabir,</b> Lead Designer</p>
+      <div class="flex justify-between border-t-2 border-black py-4 sm:py-2 md:py-4 lg:py-6 xl:py-8 font-medium text-xl">
+        <p>4.5 Excellent</p>
+        <p>★★★★☆</p>
+      </div>
+    </div>
+    <div class="bg-[#ECF2FF] border-2 border-black rounded-3xl mt-10 sm:mt-0 px-6 xl:px-10 pt-6 xl:pt-10 pb-0 md:min-w-[300px] lg:min-w-[400px] xl:min-w-[600px]">
+      <img class="sm:w-40 md:w-auto sm:h-10 md:h-auto" src="../../../assets/imgs/shipbob-logo.png" alt="Monday.com">
+      <p class="font-medium text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-w-md my-4 sm:my-2 md:my-4 lg:my-8 xl:my-10">
+        “How DocuSign CLM helps Celonis scale its global business.”
+      </p>
+      <p class="mb-6 sm:mb-4 md:mb-6 lg:mb-8"><b class="font-medium">Mark Joge,</b> Marketing Chief</p>
+      <div class="flex justify-between border-t-2 border-black py-4 sm:py-2 md:py-4 lg:py-6 xl:py-8 font-medium text-xl">
+        <p>4.8 Awesome</p>
+        <p>★★★★★</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-full flex justify-evenly py-6">
+  <img src="../../../assets/imgs/google-blue.png" alt="partner logo" class="object-contain w-14 sm:w-20 md:w-24 lg:w-auto">
+  <img src="../../../assets/imgs/shipBob-blue.png" alt="partner logo" class="object-contain w-16 sm:w-20 md:w-28 lg:w-auto">
+  <img src="../../../assets/imgs/dribbble-blue.png" alt="partner logo" class="object-contain w-14 sm:w-20 md:w-24 lg:w-auto">
+  <img src="../../../assets/imgs/slack-blue.png" alt="partner logo" class="object-contain w-14 sm:w-20 md:w-24 lg:w-auto">
+  <img src="../../../assets/imgs/vine-blue.png" alt="partner logo" class="object-contain w-10 sm:w-20 md:w-20 lg:w-auto">
+  <img src="../../../assets/imgs/airbnb-blue.png" alt="partner logo" class="object-contain w-14 sm:w-20 md:w-24 lg:w-auto">
+</div>
