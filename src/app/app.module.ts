@@ -12,6 +12,8 @@ import { CandidatesComponent } from './components/candidates/candidates.componen
 import { CompaniesComponent } from './components/companies/companies.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
 import { AboutComponent } from './components/about/about.component';
+import { CandidateProfileComponent } from './components/candidate-profile/candidate-profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { AboutComponent } from './components/about/about.component';
     CandidatesComponent,
     CompaniesComponent,
     JobDetailsComponent,
-    AboutComponent
+    AboutComponent,
+    CandidateProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,9 +13,4 @@ export class AboutComponent {
     this.openIndex = this.openIndex === index ? -1 : index;
   }
 
-  activePanel: number | null = null;
-
-  togglePanel(panelIndex: number): void {
-    this.activePanel = this.activePanel === panelIndex ? null : panelIndex;
-  }
 }
