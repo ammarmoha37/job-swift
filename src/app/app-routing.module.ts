@@ -7,6 +7,7 @@ import { CompaniesComponent } from './components/companies/companies.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
 import { AboutComponent } from './components/about/about.component';
 import { CandidateProfileComponent } from './components/candidate-profile/candidate-profile.component';
+import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'candidates', component: CandidatesComponent },
   { path: 'candidate/:id', component: CandidateProfileComponent },
   { path: 'companies', component: CompaniesComponent },
+  { path: 'company/:id', component: CompanyProfileComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'categories', component: HomeComponent },
 ];

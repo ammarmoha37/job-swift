@@ -14,6 +14,7 @@ import { JobDetailsComponent } from './components/job-details/job-details.compon
 import { AboutComponent } from './components/about/about.component';
 import { CandidateProfileComponent } from './components/candidate-profile/candidate-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CompaniesComponent,
     JobDetailsComponent,
     AboutComponent,
-    CandidateProfileComponent
+    CandidateProfileComponent,
+    CompanyProfileComponent
   ],
   imports: [
     BrowserModule,
