@@ -1,0 +1,58 @@
+<div *ngIf="isVisible" class="fixed inset-0 flex items-center justify-center z-50">
+  <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg" (click)="onScreenClick($event)"></div>
+  <div class="bg-white p-8 rounded-lg shadow-lg z-10 max-w-lg w-5/6" (click)="onLoginClick($event)">
+    <p class="text-blue-950 font-medium font-serif text-center text-2xl sm:text-3xl md:text-4xl">Hi, Welcome Back</p>
+    <div class="flex justify-center mt-2">
+      <p class="text-blue-950 text-sm sm:text-lg font-normal text-center">Still Don't have an account? <b class="font-normal text-blue-700">Sign up</b></p>
+    </div>
+
+    <div class="mt-4">
+      <p class="text-gray-500 mb-2">Email*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your email">
+        <div>
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3">
+      <p class="text-gray-500 mb-2">Password*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+        <input class="p-2 w-11/12 text-xl outline-none" type="password" placeholder="Enter your password">
+        <div>
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between mt-4 text-sm">
+      <div class="flex gap-2">
+        <input type="checkbox" class="mt-0.5 cursor-pointer"  name="agree" id="agree">
+        <p class="text-xs sm:text-sm text-black">Keep me Logged in</p>
+      </div>
+      <p class="text-xs sm:text-sm text-black font-normal">Forgot password?</p>
+    </div>
+    <button class="mt-4 bg-blue-700 text-white font-medium h-14 w-full text-xl rounded-lg">Register</button>
+    <div class="flex items-center justify-center mt-4 space-x-4">
+      <div class="h-px w-full bg-gray-300"></div>
+      <div class="text-lg text-black font-normal">OR</div>
+      <div class="h-px w-full bg-gray-300"></div>
+    </div>
+    <div class="text-black font-normal flex flex-wrap justify-center items-center gap-3 mt-4">
+      <div class="flex justify-center items-center gap-2 border border-black rounded-lg p-3 w-full md:w-[48%]">
+        <img class="w-6 h-6" src="../../../assets/imgs/google-login.png" alt="google-icon">
+        <p>Login with Google</p>
+      </div>
+      <div class="flex justify-center items-center gap-3 border border-black rounded-lg p-3 w-full md:w-[48%]">
+        <img class="w-6 h-6" src="../../../assets/imgs/facebook-login.png" alt="google-icon">
+        <p>Login with Facebook</p>
+      </div>
+    </div>
+    <div class="flex justify-center mt-6">
+      <p class="text-gray-500 font-normal text-center text-sm sm:text-base">Still Don't have an account? <b class="font-normal text-blue-700">Sign up</b></p>
+    </div>
+  </div>
+</div>
