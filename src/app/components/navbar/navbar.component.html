@@ -92,7 +92,7 @@
           'text-blue-700 bg-blue-100': (!isHome || scrolled)}">
         Log In
       </button>
-      <button class="bg-blue-700 text-white rounded-3xl pb-1 px-3">Create Account</button>
+      <button class="bg-blue-700 text-white rounded-3xl pb-1 px-3"  routerLink="/register">Create Account</button>
     </div>
     <!-- Small devices view -->
     <button (click)="toggleMenu()" class="lg:hidden mr-5 focus:outline-none">
@@ -149,7 +149,7 @@
       </li>
       <div class="mt-8 flex flex-col gap-2 font-medium items-center">
         <button class="bg-blue-100 text-blue-600 rounded-3xl px-5 py-1 pb-2">Log In</button>
-        <button class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2">Create Account</button>
+        <button class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2" routerLink="/register">Create Account</button>
       </div>
     </ul>
   </div>

@@ -8,6 +8,7 @@ import { JobDetailsComponent } from './components/job-details/job-details.compon
 import { AboutComponent } from './components/about/about.component';
 import { CandidateProfileComponent } from './components/candidate-profile/candidate-profile.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
+import { RegisterationComponent } from './components/registeration/registeration.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'companies', component: CompaniesComponent },
   { path: 'company/:id', component: CompanyProfileComponent },
   { path: 'about-us', component: AboutComponent },
-  { path: 'categories', component: HomeComponent },
+  { path: 'register', component: RegisterationComponent },
 ];
 
 @NgModule({
