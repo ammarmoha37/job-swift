@@ -5,7 +5,8 @@
     'bg-transparent text-white': isHome && !scrolled,
     'border-b-2 bg-white': isHome && scrolled,
     'bg-white text-blue-950 border-b-2 sticky': !isHome}">
-  <div class="flex justify-between lg:justify-center py-2.5 md:gap-96 lg:gap-12 xl:gap-48">
+  <div class="flex justify-between max-w-7xl mx-auto py-3 pr-5"
+      [ngClass]="{'py-2.5': token, 'py-3': !token}">
     <div class="logo flex items-center gap-2 ml-5">
       <img
         *ngIf="isHome && !scrolled"
@@ -85,14 +86,38 @@
       </li>
     </ul>
     <div class="hidden lg:flex gap-2 font-medium">
-      <button (click)="login.showLogin()"
-        class="rounded-3xl pb-1 px-3"
-        [ngClass]="{
-          'text-white bg-white bg-opacity-20': (isHome && !scrolled),
-          'text-blue-700 bg-blue-100': (!isHome || scrolled)}">
-        Log In
-      </button>
-      <button class="bg-blue-700 text-white rounded-3xl pb-1 px-3" routerLink="/register">Create Account</button>
+      <ng-container *ngIf="token; else loginButtons">
+        <div class="flex flex-col items-center cursor-pointer" (click)="toggleMenu()">
+          <svg *ngIf="isHome && !scrolled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+              <path fill="white" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984" />
+            </g>
+          </svg>
+          <svg *ngIf="!isHome || scrolled" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+              <path fill="#141452" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984" />
+            </g>
+          </svg>
+          <span class="text-xs">{{ userName }}</span>
+        </div>
+        <div class="hidden py-4 px-10 absolute top-16 lg:right-4 xl:right-10 z-10 rounded-lg"
+        [ngClass]="{'block': showMenu, 'hidden': !showMenu,
+                    'bg-gray-400 sm:bg-white sm:bg-opacity-30': (isHome && !scrolled), 'bg-slate-400': (!isHome || scrolled)}">
+          <button (click)="logout()" class="bg-blue-700 text-white rounded-3xl pb-1 px-3">Logout</button>
+        </div>
+      </ng-container>
+      <ng-template #loginButtons>
+        <button (click)="login.showLogin()"
+          class="rounded-3xl pb-1 px-3"
+          [ngClass]="{
+            'text-white bg-white bg-opacity-20': (isHome && !scrolled),
+            'text-blue-700 bg-blue-100': (!isHome || scrolled)}">
+          Log In
+        </button>
+        <button class="bg-blue-700 text-white rounded-3xl pb-1 px-3" routerLink="/register">Create Account</button>
+      </ng-template>
     </div>
     <!-- Small devices view -->
     <button (click)="toggleMenu()" class="lg:hidden mr-5 focus:outline-none">
@@ -148,11 +173,19 @@
         </button>
       </li>
       <div class="mt-8 flex flex-col gap-2 font-medium items-center">
-        <button (click)="login.showLogin()"
-          class="bg-blue-100 text-blue-600 rounded-3xl px-5 py-1 pb-2">
-          Log In
-        </button>
-        <button class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2" routerLink="/register">Create Account</button>
+        <ng-container *ngIf="token; else loginButtons">
+          <div class="flex flex-col items-center gap-3">
+            <span>{{ userName }}</span>
+            <button (click)="logout()" class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2">Logout</button>
+          </div>
+        </ng-container>
+        <ng-template #loginButtons>
+          <button (click)="login.showLogin()"
+            class="bg-blue-100 text-blue-600 rounded-3xl px-5 py-1 pb-2">
+            Log In
+          </button>
+          <button class="bg-blue-700 text-white rounded-3xl px-5 py-1 pb-2" routerLink="/register">Create Account</button>
+        </ng-template>
       </div>
     </ul>
   </div>
