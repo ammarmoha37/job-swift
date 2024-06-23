@@ -25,6 +25,7 @@ import { JobListingComponent } from './components/job-listing/job-listing.compon
 import { RegisterationComponent } from './components/registeration/registeration.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddJobComponent } from './components/add-job/add-job.component';
+import { AddCompanyComponent } from './components/add-company/add-company.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AddJobComponent } from './components/add-job/add-job.component';
     JobListingComponent,
     RegisterationComponent,
     LoginComponent,
-    AddJobComponent
+    AddJobComponent,
+    AddCompanyComponent
   ],
   imports: [
     BrowserModule,

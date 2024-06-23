@@ -1,0 +1,164 @@
+<div class="flex flex-col items-center py-10 sm:py-14 md:py-20 bg-blue-100">
+  <p class="text-blue-950 font-semibold text-4xl sm:text-5xl md:text-6xl">Add Company</p>
+
+  <form [formGroup]="companyForm" (ngSubmit)="onSubmit()" class="bg-white rounded-3xl py-10 px-6 sm:px-16 mt-10 sm:mt-16 w-5/6 sm:w-1/2">
+    <p class="text-blue-950 font-medium font-serif text-center text-2xl sm:text-3xl md:text-4xl">Company Details</p>
+
+    <!-- Company Name -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Company Name*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('name').invalid && companyForm.get('name').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company name" formControlName="name">
+        <div *ngIf="companyForm.controls['name'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Image -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Company Image URL*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('image').invalid && companyForm.get('image').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company image URL" formControlName="image">
+        <div *ngIf="companyForm.controls['image'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Logo -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Company Logo URL*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('logoUrl').invalid && companyForm.get('logoUrl').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company logo URL" formControlName="logoUrl">
+        <div *ngIf="companyForm.controls['logoUrl'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Overview -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Overview*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('overview').invalid && companyForm.get('overview').touched}">
+        <textarea class="p-2 w-full text-xl outline-none" placeholder="Enter overview" formControlName="overview"></textarea>
+      </div>
+    </div>
+
+    <!-- Website Link -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Website Link*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('website_link').invalid && companyForm.get('website_link').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter website link" formControlName="website_link">
+        <div *ngIf="companyForm.controls['website_link'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Location*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('location').invalid && companyForm.get('location').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter location" formControlName="location">
+        <div *ngIf="companyForm.controls['location'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Size -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Company Size*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('size').invalid && companyForm.get('size').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company size" formControlName="size">
+        <div *ngIf="companyForm.controls['size'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Email*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('email').invalid && companyForm.get('email').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="email" placeholder="Enter email" formControlName="email">
+        <div *ngIf="companyForm.controls['email'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Phone*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('phone').invalid && companyForm.get('phone').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter phone number" formControlName="phone">
+        <div *ngIf="companyForm.controls['phone'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founded Date -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Founded Date*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('founded_date').invalid && companyForm.get('founded_date').touched}">
+        <input class="p-2 w-full text-xl outline-none" type="date" formControlName="founded_date">
+      </div>
+    </div>
+
+    <!-- Category -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Category*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('category').invalid && companyForm.get('category').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter category" formControlName="category">
+        <div *ngIf="companyForm.controls['category'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Number of Jobs -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Number of Jobs*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': companyForm.get('num_of_jobs').invalid && companyForm.get('num_of_jobs').touched}">
+        <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter number of jobs" formControlName="num_of_jobs">
+      </div>
+    </div>
+
+    <button type="submit" class="mt-6 sm:mt-8  text-white font-medium h-14 w-full text-xl rounded-lg"
+      [disabled]="companyForm.invalid"
+      [ngClass]="companyForm.invalid ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-700 cursor-pointer'"
+      >Add Company</button>
+  </form>
+</div>
