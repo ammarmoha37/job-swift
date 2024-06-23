@@ -24,6 +24,7 @@ import { CompanyProfileComponent } from './components/company-profile/company-pr
 import { JobListingComponent } from './components/job-listing/job-listing.component';
 import { RegisterationComponent } from './components/registeration/registeration.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddJobComponent } from './components/add-job/add-job.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginComponent } from './components/login/login.component';
     CompanyProfileComponent,
     JobListingComponent,
     RegisterationComponent,
-    LoginComponent
+    LoginComponent,
+    AddJobComponent
   ],
   imports: [
     BrowserModule,

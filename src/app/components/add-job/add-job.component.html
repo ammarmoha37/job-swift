@@ -1,0 +1,247 @@
+<div class="flex flex-col items-center py-10 sm:py-14 md:py-20 bg-blue-100">
+  <p class="text-blue-950 font-semibold text-4xl sm:text-5xl md:text-6xl">Add Job</p>
+
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="bg-white rounded-3xl py-10 px-6 sm:px-16 mt-10 sm:mt-16 w-5/6 sm:w-auto">
+    <p class="text-blue-950 font-medium font-serif text-center text-2xl sm:text-3xl md:text-4xl">Job Details</p>
+
+    <!-- Job Title -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Job Title*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('title').invalid && jobForm.get('title').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter job title" formControlName="title">
+        <div *ngIf="jobForm.controls['title'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Name -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Company Name*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('company_name').invalid && jobForm.get('company_name').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company name" formControlName="company_name">
+        <div *ngIf="jobForm.controls['company_name'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Published Date -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Published Date*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('published_date').invalid && jobForm.get('published_date').touched}">
+        <input class="p-2 w-full text-xl outline-none" type="date" formControlName="published_date">
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="mt-4 sm:mt-6 gap-4">
+      <div class="flex flex-col sm:flex-row justify-between gap-3">
+        <div class="">
+          <p class="text-gray-500 mb-2">Min Salary*</p>
+          <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-red-500': jobForm.get('min_salary').invalid && jobForm.get('min_salary').touched}">
+            <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter min salary" formControlName="min_salary">
+          </div>
+        </div>
+        <div class="">
+          <p class="text-gray-500 mb-2">Max Salary*</p>
+          <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-red-500': jobForm.get('max_salary').invalid && jobForm.get('max_salary').touched}">
+            <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter max salary" formControlName="max_salary">
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p class="text-gray-500 mb-2">Salary Type*</p>
+        <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+            [ngClass]="{'border-red-500': jobForm.get('salary_type').invalid && jobForm.get('salary_type').touched}">
+          <select class="p-2 w-full text-xl outline-none" formControlName="salary_type">
+            <option value="" disabled selected>Select salary type</option>
+            <option value="hourly">Hourly</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expertise -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Expertise*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('expertise').invalid && jobForm.get('expertise').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter expertise" formControlName="expertise">
+        <div *ngIf="jobForm.controls['expertise'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Location*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('location').invalid && jobForm.get('location').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter location" formControlName="location">
+        <div *ngIf="jobForm.controls['location'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Type -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Job Type*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('type').invalid && jobForm.get('type').touched}">
+          <select class="p-2 w-full text-xl outline-none" formControlName="type">
+            <option value="" disabled selected>Select job type</option>
+            <option value="Fulltime" selected>Full time</option>
+            <option value="Part time">Part time</option>
+            <option value="Freelance">Freelance</option>
+          </select>
+        <div *ngIf="jobForm.controls['type'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Experience*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('experience').invalid && jobForm.get('experience').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter experience" formControlName="experience">
+        <div *ngIf="jobForm.controls['experience'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Overview*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('overview').invalid && jobForm.get('overview').touched}">
+        <textarea class="p-2 w-full text-xl outline-none" placeholder="Enter overview" formControlName="overview"></textarea>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Description*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('disc').invalid && jobForm.get('disc').touched}">
+        <textarea class="p-2 w-full text-xl outline-none" placeholder="Enter description" formControlName="disc"></textarea>
+      </div>
+    </div>
+
+    <!-- Category -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Category*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('category').invalid && jobForm.get('category').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter category" formControlName="category">
+        <div *ngIf="jobForm.controls['category'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Responsibilities -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Responsibilities</p>
+      <div class="flex flex-col space-y-4">
+        <div *ngFor="let responsibility of getResponsibilitiesControls(); let i=index">
+          <div class="flex items-center gap-1 w-full space-x-2">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+              <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="responsibility">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeResponsibility(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <button *ngIf="i === getResponsibilitiesControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addResponsibility()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Required Skills -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Required Skills</p>
+      <div class="flex flex-col space-y-4">
+        <div *ngFor="let skill of getRequiredSkillsControls(); let i=index">
+          <div class="flex items-center gap-1 w-full space-x-2">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+              <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="skill">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeSkill(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <button *ngIf="i === getRequiredSkillsControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addSkill()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Benefits</p>
+      <div class="flex flex-col space-y-4">
+        <div *ngFor="let benefit of getBenefitsControls(); let i=index">
+          <div class="flex items-center gap-1 w-full space-x-2">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+              <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="benefit">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeBenefit(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <button *ngIf="i === getBenefitsControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addBenefit()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="mt-6 sm:mt-8  text-white font-medium h-14 w-full text-xl rounded-lg"
+      [disabled]="jobForm.invalid"
+      [ngClass]="jobForm.invalid ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-700 cursor-pointer'"
+      >Add Job</button>
+  </form>
+</div>
