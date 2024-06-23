@@ -32,6 +32,19 @@
       </div>
     </div>
 
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Company Logo URL*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': jobForm.get('logoUrl').invalid && jobForm.get('logoUrl').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter company logo URL" formControlName="logoUrl">
+        <div *ngIf="jobForm.controls['logoUrl'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
     <!-- Published Date -->
     <div class="mt-4 sm:mt-6">
       <p class="text-gray-500 mb-2">Published Date*</p>
@@ -109,8 +122,8 @@
           [ngClass]="{'border-red-500': jobForm.get('type').invalid && jobForm.get('type').touched}">
           <select class="p-2 w-full text-xl outline-none" formControlName="type">
             <option value="" disabled selected>Select job type</option>
-            <option value="Fulltime" selected>Full time</option>
-            <option value="Part time">Part time</option>
+            <option value="Full Time" selected>Full time</option>
+            <option value="Part Time">Part time</option>
             <option value="Freelance">Freelance</option>
           </select>
         <div *ngIf="jobForm.controls['type'].valid">

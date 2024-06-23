@@ -15,4 +15,8 @@ export class JobService {
     return this.firestore.collection('jobs').add(job);
   }
 
+  getAllJobs() {
+    return this.firestore.collection('jobs').snapshotChanges();
+  }
+
 }

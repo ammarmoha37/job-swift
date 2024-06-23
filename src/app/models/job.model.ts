@@ -2,8 +2,11 @@ export interface Job {
   id: string;
   title: string;
   company_name: string;
+  logoUrl: string;
   published_date: Date;
-  salary: Salary;
+  min_salary: string;
+  max_salary: string;
+  salary_type: string;
   expertise: string;
   location: string;
   type: string;
@@ -14,12 +17,6 @@ export interface Job {
   responsibilities: Responsibility[];
   required_skills: Skill[];
   benefits: Benefit[];
-}
-
-export interface Salary {
-  min_salary: number;
-  max_salary: number;
-  salary_type: string;
 }
 
 export interface Responsibility {

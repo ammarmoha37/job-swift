@@ -18,10 +18,11 @@ export class AddJobComponent {
   constructor(private fb: FormBuilder,
               private jobService: JobService,
               private router: Router) {
-                
+
     this.jobForm = this.fb.group({
       title: ['', Validators.required],
       company_name: ['', Validators.required],
+      logoUrl: ['', Validators.required],
       published_date: ['', Validators.required],
       min_salary: ['', Validators.required],
       max_salary: ['', Validators.required],
