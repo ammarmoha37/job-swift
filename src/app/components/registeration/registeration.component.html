@@ -9,13 +9,13 @@
         <div class="w-1/2 rounded-full text-xl text-center py-1.5 cursor-pointer"
           [ngClass]="{'text-blue-700 border-blue-700 border-2 bg-white ': selectedRole === 'candidate',
                       'bg-transparent text-gray-600': selectedRole === 'employer'}"
-          (click)="selectedRole = 'candidate'">
+          (click)="selectRole('candidate')">
           Candidate
         </div>
         <div class="w-1/2  rounded-full text-xl text-center py-1.5 cursor-pointer"
           [ngClass]="{'text-blue-700 border-blue-700 border-2 bg-white': selectedRole === 'employer',
                       'border-transparent text-gray-600': selectedRole === 'candidate'}"
-          (click)="selectedRole = 'employer'">
+          (click)="selectRole('employer')">
           Employer
         </div>
       </div>

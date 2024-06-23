@@ -24,10 +24,10 @@ export class RegisterationComponent implements OnInit {
   }
 
   register() {
-
     if (this.registerForm.valid) {
       const { name, email, password } = this.registerForm.value;
-      this.authService.register(email, password, name)
+      const role = this.selectedRole;
+      this.authService.register(email, password, name, role)
         .then(() => {
           this.authService.showLogin();
           this.registerForm.markAllAsTouched();
@@ -38,7 +38,6 @@ export class RegisterationComponent implements OnInit {
       this.registerForm.markAllAsTouched();
     }
     this.registerForm.reset();
-
   }
 
   get name() { return this.registerForm.get('name'); }
@@ -53,5 +52,4 @@ export class RegisterationComponent implements OnInit {
   selectRole(role: string) {
     this.selectedRole = role;
   }
-
 }

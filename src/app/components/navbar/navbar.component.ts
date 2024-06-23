@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit{
   scrolled: boolean = false;
   token: string | null = null;
   userName: string | null = null;
+  userRole: string | null = null;
 
   private subscriptions: Subscription = new Subscription();
 
@@ -39,6 +40,12 @@ export class NavbarComponent implements OnInit{
     this.subscriptions.add(
       this.authService.userName$.subscribe(userName => {
         this.userName = userName;
+      })
+    );
+
+    this.subscriptions.add(
+      this.authService.userRole$.subscribe(userRole => {
+        this.userRole = userRole;
       })
     );
   }
@@ -68,7 +75,7 @@ export class NavbarComponent implements OnInit{
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const scrollPosition = window.scrollY|| document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.scrolled = scrollPosition >= window.innerHeight;
   }
 }
