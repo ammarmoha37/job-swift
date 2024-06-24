@@ -26,6 +26,7 @@ import { RegisterationComponent } from './components/registeration/registeration
 import { LoginComponent } from './components/login/login.component';
 import { AddJobComponent } from './components/add-job/add-job.component';
 import { AddCompanyComponent } from './components/add-company/add-company.component';
+import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AddCompanyComponent } from './components/add-company/add-company.compon
     RegisterationComponent,
     LoginComponent,
     AddJobComponent,
-    AddCompanyComponent
+    AddCompanyComponent,
+    AddCandidateComponent
   ],
   imports: [
     BrowserModule,

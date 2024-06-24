@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Company } from '../models/company.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { tap } from 'rxjs';
 
 
 @Injectable({

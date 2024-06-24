@@ -1,0 +1,269 @@
+<div class="flex flex-col items-center py-10 sm:py-14 md:py-20 bg-blue-100">
+  <p class="text-blue-950 font-semibold text-4xl sm:text-5xl md:text-6xl">Add Candidate</p>
+
+  <form [formGroup]="candidateForm" (ngSubmit)="onSubmit()" class="bg-white rounded-3xl py-10 px-6 sm:px-16 mt-10 sm:mt-16 w-5/6 sm:w-1/2">
+    <p class="text-blue-950 font-medium font-serif text-center text-2xl sm:text-3xl md:text-4xl">Candidate Details</p>
+
+    <!-- Candidate Name -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Name*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('name').invalid && candidateForm.get('name').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your name" formControlName="name">
+        <div *ngIf="candidateForm.controls['name'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="mt-4 sm:mt-6 mb-2">
+      <p class="text-gray-500 mb-2">Title*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('title').invalid && candidateForm.get('title').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your job title" formControlName="title">
+        <div *ngIf="candidateForm.controls['title'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Email -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Email*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('email').invalid && candidateForm.get('email').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="email" placeholder="Enter your email" formControlName="email">
+        <div *ngIf="candidateForm.controls['email'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Age -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Age*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('age').invalid && candidateForm.get('age').touched}">
+        <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter your age" formControlName="age">
+      </div>
+    </div>
+
+    <!-- Candidate Gender -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Gender*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('gender').invalid && candidateForm.get('gender').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your gender" formControlName="gender">
+        <div *ngIf="candidateForm.controls['gender'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Image -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Image URL*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('image').invalid && candidateForm.get('image').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your image URL" formControlName="image">
+        <div *ngIf="candidateForm.controls['image'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Location -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Location*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('location').invalid && candidateForm.get('location').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your location" formControlName="location">
+        <div *ngIf="candidateForm.controls['location'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Qualification -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Qualification*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('qualification').invalid && candidateForm.get('qualification').touched}">
+        <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your qualification" formControlName="qualification">
+        <div *ngIf="candidateForm.controls['qualification'].valid">
+          <svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.84375 7.90957L6.28819 12.1874L14.8438 1.29846" stroke="#4E5CFF" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="mt-4 sm:mt-6 gap-4">
+      <div class="flex flex-col sm:flex-row justify-between gap-3">
+        <div class="w-1/2">
+          <p class="text-gray-500 mb-2">Min Salary*</p>
+          <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-red-500': candidateForm.get('min_salary').invalid && candidateForm.get('min_salary').touched}">
+            <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter min salary" formControlName="min_salary">
+          </div>
+        </div>
+        <div class="w-1/2">
+          <p class="text-gray-500 mb-2">Max Salary*</p>
+          <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-red-500': candidateForm.get('max_salary').invalid && candidateForm.get('max_salary').touched}">
+            <input class="p-2 w-full text-xl outline-none" type="number" placeholder="Enter max salary" formControlName="max_salary">
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p class="text-gray-500 mb-2">Salary Type*</p>
+        <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+            [ngClass]="{'border-red-500': candidateForm.get('salary_type').invalid && candidateForm.get('salary_type').touched}">
+          <select class="p-2 w-full text-xl outline-none" formControlName="salary_type">
+            <option value="" disabled selected>Select salary type</option>
+            <option value="hourly">Hourly</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate Verified -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Verified*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('verified').invalid && candidateForm.get('verified').touched}">
+        <select class="p-2 w-full text-xl outline-none" formControlName="verified">
+          <option [ngValue]="null" disabled selected>Select Answer</option>
+          <option [ngValue]="true">Yes</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Candidate online -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Online*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('online').invalid && candidateForm.get('online').touched}">
+        <select class="p-2 w-full text-xl outline-none" formControlName="online">
+          <option [ngValue]="null" disabled selected>Select Answer</option>
+          <option [ngValue]="true">Yes</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="mt-4 sm:mt-6">
+      <p class="text-gray-500 mb-2">Overview*</p>
+      <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+          [ngClass]="{'border-red-500': candidateForm.get('overview').invalid && candidateForm.get('overview').touched}">
+        <textarea class="p-2 w-full text-xl outline-none" placeholder="Enter overview" formControlName="overview"></textarea>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Skills</p>
+      <div class="flex flex-col space-y-4">
+        <div *ngFor="let skill of getSkillsControls(); let i = index">
+          <div class="flex items-center gap-1 w-full space-x-2">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+                [ngClass]="{'border-blue-950': skill.valid || skill.pristine, 'border-red-500': skill.invalid && (skill.dirty || skill.touched)}">
+              <input class="p-2 w-11/12 text-xl outline-none" type="text" placeholder="Enter your skill" [formControl]="skill">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeSkill(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <button *ngIf="i === getSkillsControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addSkill()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Education</p>
+      <div class="flex flex-col space-y-4">
+        <div class="flex flex-col items-end" *ngFor="let edu of getEducationControls(); let i = index" [formGroup]="edu">
+          <div class="flex flex-col space-y-2 w-full p-2 mb-3 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-blue-950': edu.valid || edu.pristine, 'border-red-500': edu.invalid && (edu.dirty || edu.touched)}">
+            <div class="flex items-center gap-2">
+              <input class="p-2 w-11/12 text-xl outline-none" formControlName="degree" placeholder="Degree" type="text">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeEdu(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <input class="p-2 text-xl outline-none" formControlName="institution_name" placeholder="Institution Name" type="text">
+            <input class="p-2 text-xl outline-none" formControlName="disc" placeholder="Description" type="text">
+            <input class="p-2 text-xl outline-none" formControlName="date" placeholder="Date" type="date">
+          </div>
+          <button *ngIf="i === getEducationControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addEdu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="mt-8 sm:mt-10 mb-2">
+      <p class="text-gray-500 mb-2">Experience</p>
+      <div class="flex flex-col space-y-4">
+        <div class="flex flex-col items-end" *ngFor="let experience of getExperiencesControls(); let i = index" [formGroup]="experience">
+          <div class="flex flex-col space-y-2 w-full p-2 mb-3 border-2 border-blue-950 rounded-xl"
+              [ngClass]="{'border-blue-950': experience.valid || experience.pristine, 'border-red-500': experience.invalid && (experience.dirty || experience.touched)}">
+            <div class="flex items-center gap-2">
+              <input class="p-2 w-11/12 text-xl outline-none" formControlName="title" placeholder="Title" type="text">
+              <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeExperience(i)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <input class="p-2 text-xl outline-none" formControlName="institution_name" placeholder="Institution Name" type="text">
+            <input class="p-2 text-xl outline-none" formControlName="disc" placeholder="Description" type="text">
+            <input class="p-2 text-xl outline-none" formControlName="start_date" placeholder="Start Date" type="date">
+            <input class="p-2 text-xl outline-none" formControlName="end_date" placeholder="End Date" type="date">
+          </div>
+          <button *ngIf="i === getExperiencesControls().length - 1" type="button" class="bg-green-500 text-white p-5 rounded-lg" (click)="addExperience()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="mt-6 sm:mt-8  text-white font-medium h-14 w-full text-xl rounded-lg"
+      [disabled]="candidateForm.invalid"
+      [ngClass]="candidateForm.invalid ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-700 cursor-pointer'"
+      >Add Candidate</button>
+  </form>
+</div>

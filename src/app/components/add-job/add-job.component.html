@@ -32,6 +32,7 @@
       </div>
     </div>
 
+    <!-- Company Logo -->
     <div class="mt-4 sm:mt-6">
       <p class="text-gray-500 mb-2">Company Logo URL*</p>
       <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
@@ -186,7 +187,8 @@
       <div class="flex flex-col space-y-4">
         <div *ngFor="let responsibility of getResponsibilitiesControls(); let i=index">
           <div class="flex items-center gap-1 w-full space-x-2">
-            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+                [ngClass]="{'border-blue-950': responsibility.valid || responsibility.pristine, 'border-red-500': responsibility.invalid && (responsibility.dirty || responsibility.touched)}">
               <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="responsibility">
               <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeResponsibility(i)">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -210,7 +212,8 @@
       <div class="flex flex-col space-y-4">
         <div *ngFor="let skill of getRequiredSkillsControls(); let i=index">
           <div class="flex items-center gap-1 w-full space-x-2">
-            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+                [ngClass]="{'border-blue-950': skill.valid || skill.pristine, 'border-red-500': skill.invalid && (skill.dirty || skill.touched)}">
               <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="skill">
               <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeSkill(i)">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -234,7 +237,8 @@
       <div class="flex flex-col space-y-4">
         <div *ngFor="let benefit of getBenefitsControls(); let i=index">
           <div class="flex items-center gap-1 w-full space-x-2">
-            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl">
+            <div class="flex items-center w-full p-2 border-2 border-blue-950 rounded-xl"
+                [ngClass]="{'border-blue-950': benefit.valid || benefit.pristine, 'border-red-500': benefit.invalid && (benefit.dirty || benefit.touched)}">
               <input class="p-2 w-11/12 text-xl outline-none" type="text" [formControl]="benefit">
               <button type="button" class="ml-2 bg-red-500 text-white p-2 rounded-full" (click)="removeBenefit(i)">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

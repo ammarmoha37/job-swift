@@ -11,6 +11,7 @@ import { CompanyProfileComponent } from './components/company-profile/company-pr
 import { RegisterationComponent } from './components/registeration/registeration.component';
 import { AddJobComponent } from './components/add-job/add-job.component';
 import { AddCompanyComponent } from './components/add-company/add-company.component';
+import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterationComponent },
   { path: 'add-job', component: AddJobComponent },
   { path: 'add-company', component: AddCompanyComponent },
+  { path: 'add-candidate', component: AddCandidateComponent },
 ];
 
 @NgModule({

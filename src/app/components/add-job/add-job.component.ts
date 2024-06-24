@@ -35,9 +35,9 @@ export class AddJobComponent {
       disc: ['', Validators.required],
       category: ['', Validators.required],
 
-      responsibilities: this.fb.array([this.fb.control('')]),
-      required_skills: this.fb.array([this.fb.control('')]),
-      benefits: this.fb.array([this.fb.control('')]),
+      responsibilities: this.fb.array([this.fb.control('', Validators.required)]),
+      required_skills: this.fb.array([this.fb.control('', Validators.required)]),
+      benefits: this.fb.array([this.fb.control('', Validators.required)]),
     });
 
     this.responsibilities = this.jobForm.get('responsibilities') as FormArray;
@@ -59,7 +59,7 @@ export class AddJobComponent {
   }
 
   addResponsibility() {
-    this.responsibilities.push(this.fb.control(''));
+    this.responsibilities.push(this.fb.control('', Validators.required));
   }
 
   removeResponsibility(index: number) {
@@ -67,7 +67,7 @@ export class AddJobComponent {
   }
 
   addSkill() {
-    this.required_skills.push(this.fb.control(''));
+    this.required_skills.push(this.fb.control('', Validators.required));
   }
 
   removeSkill(index: number) {
@@ -75,7 +75,7 @@ export class AddJobComponent {
   }
 
   addBenefit() {
-    this.benefits.push(this.fb.control(''));
+    this.benefits.push(this.fb.control('', Validators.required));
   }
 
   removeBenefit(index: number) {
