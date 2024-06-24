@@ -76,7 +76,10 @@
             <p class="font-medium text-sm text-blue-950">{{ candidate.location }}</p>
           </div>
         </div>
-        <button class="bg-blue-700 text-white font-semibold h-10 w-60 rounded-3xl">View Profile</button>
+        <button class="bg-blue-700 text-white font-semibold h-10 w-60 rounded-3xl"
+                [routerLink]="['/candidate', candidate.id]">
+          View Profile
+        </button>
       </div>
     </div>
   </div>

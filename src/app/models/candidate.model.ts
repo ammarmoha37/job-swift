@@ -1,5 +1,4 @@
 export interface Candidate {
-  id: string;
   job_title: string;
   name: string;
   image: string;
