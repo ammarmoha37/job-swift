@@ -1,5 +1,4 @@
 export interface Job {
-  id: string;
   title: string;
   company_name: string;
   logoUrl: string;

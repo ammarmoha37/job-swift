@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../../services/company.service';
 import { Company } from '../../models/company.model';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './company-profile.component.html',
   styleUrl: './company-profile.component.css'
 })
-export class CompanyProfileComponent {
+export class CompanyProfileComponent implements OnInit{
 
   company$: Observable<Company>;
 
