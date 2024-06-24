@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable, catchError, of, switchMap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CandidateService } from '../../services/candidate.service';
 import { ActivatedRoute } from '@angular/router';
 import { Candidate } from '../../models/candidate.model';
@@ -15,7 +14,7 @@ export class CandidateProfileComponent implements OnInit {
   contactForm: FormGroup;
   candidate$: Observable<Candidate>;
 
-  constructor(private fb: FormBuilder, private firestore: AngularFirestore,
+  constructor(private fb: FormBuilder,
               private candidateService: CandidateService,
               private route: ActivatedRoute) {
     this.contactForm = this.fb.group({

@@ -8,7 +8,8 @@ import { Observable, catchError, map, of } from 'rxjs';
 })
 export class CandidateService {
 
-  candidate: Candidate
+  candidate: Candidate;
+  
   constructor(private firestore: AngularFirestore) { }
 
   addCandidate(candidate: Candidate) {

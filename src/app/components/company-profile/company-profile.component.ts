@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { CompanyService } from '../../services/company.service';
+import { Company } from '../../models/company.model';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-company-profile',
@@ -7,4 +11,15 @@ import { Component } from '@angular/core';
 })
 export class CompanyProfileComponent {
 
+  company$: Observable<Company>;
+
+  constructor(private companyService: CompanyService,
+              private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const companyId = params['id'];
+      this.company$ = this.companyService.getCompanyById(companyId);
+    });
+  }
 }

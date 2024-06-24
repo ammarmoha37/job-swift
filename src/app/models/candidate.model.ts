@@ -18,7 +18,6 @@ export interface Candidate {
 }
 
 export interface Education {
-  id: string;
   degree: string;
   institution_name: string;
   disc: string;
@@ -30,7 +29,6 @@ export interface Skill {
 }
 
 export interface WorkExperience {
-  id: string;
   title: string;
   institution_name: string;
   disc: string;

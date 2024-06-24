@@ -1,30 +1,19 @@
 <div class="flex flex-col items-center py-10 sm:py-14 md:py-28 bg-blue-100">
   <p class="text-blue-950 font-semibold text-4xl sm:text-5xl md:text-6xl">Company Details</p>
 </div>
-<div class="w-5/6 mx-auto max-w-7xl">
+<div class="w-5/6 mx-auto max-w-7xl"  *ngIf="company$ | async as company">
   <div class="flex flex-col lg:flex-row justify-center lg:justify-between w-full py-6 sm:py-8 md:py-12 xl:py-16">
     <div class="lg:w-4/6">
       <div class="mb-10 sm:mb-12 md:mb-14">
         <h2 class="font-medium text-3xl mb-5">Overview</h2>
         <div>
           <p class="text-lg opacity-75 leading-loose mb-5">
-            Moody's Corporation, often referred to as Moody's, is an American business and financial services company.
-            It is the holding company for Moody's Investors Service (MIS), an American credit rating agency, and Moody's Analytics (MA),
-            an American provider.
-          </p>
-          <p  class="text-lg opacity-75 leading-loose mb-5">
-            Moody's was founded by John Moody in 1909 to produce manuals of statistics related to stocks and bonds and bond ratings.
-            Moody's was acquired by Dun & Bradstreet in 1962. In 2000, Dun & Bradstreet spun off Moody's Corporation as a separate company that was listed on the NYSE under MCO.
-            In 2007, Moody's Corporation was split into two operating divisions, Moody's Investors Service, the rating agency, and Moody's Analytics, with all of its other products.
-          </p>
-          <p  class="text-lg opacity-75 leading-loose">
-            Moody's Corporation, often referred to as Moody's, is an American business and financial services company.
-            It is the holding company for Moody's Investors Service (MIS), an American credit rating agency, and Moody's Analytics (MA), an American provider of financial analysis software and services.
+            {{ company.overview }}
           </p>
         </div>
       </div>
       <div class="mb-16 lg:mb-0">
-        <img class="rounded-3xl mb-10" src="../../../assets/imgs/slack-company.jpg" alt="company-img">
+        <img class="rounded-3xl mb-10 w-[840px] h-[470px]" [src]="company.image" alt="company-img">
         <div class="flex gap-4 items-center">
           <p class="text-blue-950 font-medium text-xl">Social:</p>
             <div class="flex items-center justify-center gap-3 lg:gap-2 xl:gap-3 lg:mt-4 xl:mt-0">
@@ -49,32 +38,32 @@
     <div class="flex flex-col items-center lg:w-1/4">
       <div class="bg-blue-100 p-6 rounded-2xl w-full sm:w-2/3 md:w-1/2 lg:w-full">
         <div class="flex flex-col items-center border-b-2 border-blue-200 pb-8 lg:pb-4 xl:pb-8">
-          <img src="../../../assets/imgs/slack-color-logo.png" alt="profile pic">
-          <h2 class="font-medium text-blue-950 text-2xl lg:text-xl mt-4 mb-6 lg:mb-4 xl:mb-6">Slack Inc.</h2>
+          <img class="w-16 h-16 rounded-full object-cover" [src]="company.logoUrl" alt="profile pic">
+          <h2 class="font-medium text-blue-950 text-2xl lg:text-xl mt-4 mb-6 lg:mb-4 xl:mb-6">{{ company.name }}</h2>
           <p class="font-medium underline text-blue-700 text-lg lg:text-xl">Visit our website</p>
         </div>
         <div class="flex flex-col gap-6 lg:gap-4 xl:gap-6 mt-6">
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Location:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">Spain, Barcelona</p>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.location }}</p>
           </div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Size:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">500-600</p>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.size }}</p>
           </div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Email:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">adobe&#64;support.com</p>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.email }}</p>
           </div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Phone:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">(990) 234 112 779</p></div>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.phone }}</p></div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Founded:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">13 Jan, 1997</p></div>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.founded_date | date:'dd/MM/yy' }}</p></div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Category:</p>
-            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">Technology, Product</p>
+            <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base font-medium">{{ company.category }}</p>
           </div>
           <div class="flex flex-wrap lg:flex-col xl:flex-row justify-between">
             <p class="text-blue-950 text-center xl:text-left text-lg lg:text-base opacity-75">Social:</p>

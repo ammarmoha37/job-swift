@@ -1,5 +1,4 @@
 export interface Company {
-  id: string;
   image: string;
   logoUrl: string;
   name: string;
